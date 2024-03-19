@@ -514,8 +514,7 @@ def _M4_(ids,pasx):
                         "unrecognized_tries":"0",
                         "email":ids,
                         "pass":ps,
-                        "login":"Log In"
-                        'bi_xrwh': '0',}
+                        "login":"Log In",}
                         tedy = {
                         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0',
                         'Accept': '*/*',
