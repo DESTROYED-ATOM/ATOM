@@ -341,7 +341,7 @@ def _M1_(ids,pasx):
                         'sec-fetch-site': 'same-origin',
                         'sec-fetch-mode': 'cors',
                         'sec-fetch-dest': 'empty',
-                        'referer': f'https://m.facebook.com/login/?wtsid=rdr_0HpBBBchEc4DCrXrX&refsrc=deprecated&_rdr',
+                        'referer': f'https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100',
                         'accept-encoding': 'gzip, deflate, br',
                         'accept-language': 'en-IE,en-US;q=0.9,en;q=0.8'}
                         url=f"https://www.facebook.com/login.php/?login_attempt=1&display=popup"
