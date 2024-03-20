@@ -436,7 +436,7 @@ def _M3_(ids,pasb):
         global loop
         global ok
         global agents
-        sys.stdout.write(f'\r\r\033[38;5;48m{G}[BITHIKA-M2] {GR}{loop}\033[38;5;48m|OK➤\033[38;5;46m{len(ok)}')
+        sys.stdout.write(f'\r\r\033[38;5;48m{G}[BITHIKA-M3] {GR}{loop}\033[38;5;48m|OK➤\033[38;5;46m{len(ok)}')
         sys.stdout.flush()
         try:
                 for ps in pasb:
