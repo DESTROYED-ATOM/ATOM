@@ -535,6 +535,7 @@ def _M4_(ids,pasc):
         except requests.exceptions.ConnectionError:
             time.sleep(31)
     loop+=1
+ except:pass
 #━━━━━━━━━━━━━[MATHOD━FREE━M5]━━━━━━━━━━━━━━━━# b-graph 
 def _M5_(ids,pasd):
         global loop
