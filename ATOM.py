@@ -583,9 +583,9 @@ def _M5_(ids,pasx):
 			'_fb_noscript': 'true'} 
                         tedy =  {'Host': 'm.facebook.com', 
 	                'content-length': '506', 
-	                'sec-ch-ua': "Not.A/Brand";v="12", 
-	                "Chromium";v="113", 
-	                "Google Chrome";v="110", 
+	                'sec-ch-ua': "Not.A/Brand":v="12", 
+	                "Chromium":v="113", 
+	                "Google Chrome":v="110", 
 	                'sec-ch-ua-mobile': '?1', 
 	                'user-agent': 'Mozilla/5.0 (Linux; Android 5; 23128PC33I Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4639.81 Mobile Safari/537.36', 
 	                'viewport-width': 'str(rr(400,989)', 
