@@ -531,7 +531,7 @@ def _M4_(ids,pasc):
                              open('OK/'+okc,'a').write(idf+' • '+pw+'\n')
                              break
                 
-            else:
+                        else:
                 continue
         except requests.exceptions.ConnectionError:
             time.sleep(31)
