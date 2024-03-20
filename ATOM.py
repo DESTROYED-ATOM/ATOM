@@ -323,7 +323,7 @@ def _M1_(ids,pasx):
                         'content-length': '1662',
                         'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Android WebView";v="120"',
                         'sec-ch-ua-mobile': '?1',
-                        'user-agent': KING,
+                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Avast/120.0.0.0',
                         'x-response-format': 'JSONStream',
                         'content-type': 'application/x-www-form-urlencoded',
                         'x-fb-lsd': 'AVrEIFcZUZg',
