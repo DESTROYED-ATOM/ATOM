@@ -316,7 +316,7 @@ def _M1_(ids,pasx):
                 for ps in pasx:
                         session = requests.Session()
                         KING=random.choice(ugen) 
-                        free_fb = session.get('https://m.facebook.com').text
+                        BLACKX = session.get('https://m.facebook.com').text
                         info={'m_ts':re.search('name="m_ts" value="(.*?)"', str(BLACKX)).group(1), 
 			'li':re.search('name="li" value="(.*?)"', str(BLACKX)).group(1),
 			'try_number': '0', 
