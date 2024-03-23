@@ -267,7 +267,7 @@ def rndm():
         print("\033[38;5;196m[\x1b[38;5;46m4\033[38;5;196m]\x1b[38;5;46m METHOD [\033[1;34m slow \033[1;32m]")
         print("\033[38;5;196m[\x1b[38;5;46m5\033[38;5;196m]\x1b[38;5;46m METHOD [\033[1;33m fast \033[1;32m]")
         print("\033[38;5;196m[\x1b[38;5;46m6\033[38;5;196m]\x1b[38;5;46m METHOD [\033[1;34m best \033[1;32m]")
-	print("\033[38;5;196m[\x1b[38;5;46m7\033[38;5;196m]\x1b[38;5;46m METHOD [\033[1;34m new \033[1;32m]")
+        print("\033[38;5;196m[\x1b[38;5;46m7\033[38;5;196m]\x1b[38;5;46m METHOD [\033[1;34m new \033[1;32m]")
         linex()
         sumon=input(f'{K}\x1b[1;92m SELECT METHOD : ')
         for __BLACK__ in range(limit):
