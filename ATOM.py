@@ -300,8 +300,8 @@ def rndm():
                         	_BLACK_.submit(_M5_,ids,pasx)
                         if sumon in ['6','6']:
                         	_BLACK_.submit(_M6_,ids,pasx)
-			if sumon in ['7','7']:
-				_BLACK_.submit(_M7_,ids,pasx)
+                        if sumon in ['7','7']:
+	                        _BLACK_.submit(_M7_,ids,pasx)
 				
         print('')
         linex()
